@@ -1,9 +1,8 @@
 # XSS-Detection-CNN-Flask
 
-#IMAGES
+# Screenshot
 
-!(https://github.com/mstkyvz/XSS-Detection-CNN-Flask/blob/main/xss%20detector.png)
-
+![Screenshot](xss%20detector.png)
 
 
 # Requirement
