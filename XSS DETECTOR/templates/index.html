@@ -2,6 +2,70 @@
 <html>
 <head>
     <title>XSS Detector</title>
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://i.pinimg.com/originals/19/e1/71/19e171391727335f510db47a13269d2d.gif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Courier New', Courier, monospace; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #0ff; 
+        }
+
+        h1 {
+            border-bottom: 2px solid #0ff;
+            padding-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border: 2px solid #0ff;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.6); 
+            margin-top: 30px;
+        }
+
+        textarea {
+            width: 300px;
+            height: 100px;
+            border: 2px solid #0ff;
+            background-color: rgba(0, 0, 0, 0.8); 
+            color: #0ff;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            resize: none;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #0ff; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #08e; 
+        }
+
+        h2 {
+            color: white;
+            margin-top: 30px;
+            border-top: 2px solid #0ff;
+            padding-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>XSS Detector</h1>
