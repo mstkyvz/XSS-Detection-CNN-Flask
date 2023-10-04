@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XSS Detector</title>
+</head>
+<body>
+    <h1>XSS Detector</h1>
+    <form action="/" method="post">
+        <textarea name="payload" placeholder="XSS payload'ınızı buraya girin"></textarea>
+        <br><br>
+        <input type="submit" value="Tespit Et">
+    </form>
+
+    {% if result %}
+    <h2>Sonuç: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
