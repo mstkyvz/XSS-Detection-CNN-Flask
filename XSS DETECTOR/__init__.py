@@ -5,7 +5,7 @@ import pickle
 app = Flask(__name__)
 
 # Model ve Vectorizer'ı yükleme
-model = tf.keras.models.load_model("xss_model.h5")
+model = tf.keras.models.load_model("xss_detection_model-3.h5")
 
 with open("vectorizer.pkl", "rb") as file:
     vectorizer = pickle.load(file)
@@ -17,11 +17,6 @@ def index():
     if request.method == "POST":
         user_input = request.form["payload"]
         transformed_input = vectorizer.transform([user_input]).toarray()
-        
-        # Dönüştürülen veriyi modelin beklediği boyuta uygun hale getirme
-        if transformed_input.shape[1] > 100:
-            transformed_input = transformed_input[:, :100]
-
         prediction = model.predict(transformed_input)
 
         if prediction[0] > 0.5:
